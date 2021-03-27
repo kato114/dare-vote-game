@@ -24,7 +24,11 @@ class HomeController extends Controller
     public function dare() {
         $data = array();
 
-        $data['votes_count'] = Dare::count();
+        $data['dare_count'] = Dare::count();
+        $data['total_token_amount'] = Dare::sum('vote_amount');
+        $data['burned_token_amount'] = Dare::sum('vote_count');
+        $data['today_dare_count'] = Dare::where('created_at', 'like', date('Y-m-d').'%')->count();
+        $data['today_vote_count'] = Vote::where('created_at', 'like', date('Y-m-d').'%')->count();
 
         return view('frontend.dare', $data);
     }

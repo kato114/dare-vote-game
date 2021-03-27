@@ -12,7 +12,7 @@
                             <div class="sn_pg_feature">
                                 <div class="sn_pg_ftr_inner">
                                     <span class="flaticon-information"></span>
-                                    <h3>10,000,000</h3>
+                                    <h3>{{ number_format($total_token_amount) }}</h3>
                                     <p>TOTAL TOKENS WON</p>
                                 </div>
                             </div>
@@ -21,7 +21,7 @@
                             <div class="sn_pg_feature">
                                 <div class="sn_pg_ftr_inner">
                                     <span class="flaticon-cogwheel"></span>
-                                    <h3>10,000,000</h3>
+                                    <h3>{{ number_format($burned_token_amount) }}</h3>
                                     <p>TOTAL TOKENS BURNED</p>
                                 </div>
                             </div>
@@ -30,7 +30,7 @@
                             <div class="sn_pg_feature">
                                 <div class="sn_pg_ftr_inner">
                                     <span class="flaticon-computer"></span>
-                                    <h3>10,000,000</h3>
+                                    <h3>{{ number_format($today_dare_count) }}</h3>
                                     <p>TOTAL DARES TO DATE</p>
                                 </div>
                             </div>
@@ -39,7 +39,7 @@
                             <div class="sn_pg_feature">
                                 <div class="sn_pg_ftr_inner">
                                     <span class="flaticon-shopping-online-support"></span>
-                                    <h3>10,000,000</h3>
+                                    <h3>{{ number_format($today_vote_count) }}</h3>
                                     <p>TOTAL VOTES TO DATES</p>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
             </div>
             <div class="row justify-content-center mb-1">
                 <div class="col-xl-8">
-                    <p class="text-white pt-2">Total : {{ $votes_count }} votes</p>
+                    <p class="text-white pt-2">Total : {{ number_format($dare_count) }} votes</p>
                 </div>
                 <div class="col-xl-2">
                     <div class="input-group has-success">
